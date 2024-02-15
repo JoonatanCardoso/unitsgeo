@@ -1,0 +1,27 @@
+.container {
+    display: row;
+    width: 100vw;
+    padding: 20vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.title {
+    font-weight: 800;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.paragraph {
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.img {
+    display: row;
+    margin-left: 100px;
+    justify-content: center;
+    align-items: center;
+}
