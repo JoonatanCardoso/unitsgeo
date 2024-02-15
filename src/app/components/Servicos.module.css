@@ -1,0 +1,44 @@
+.container {
+    display: row;
+    width: 100vw;
+    padding: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.title {
+    font-weight: 800;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.paragraph {
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.img {
+    display: row;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.listServices {
+    overflow-y: scroll; /* Adiciona a barra de rolagem vertical */
+    scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+    -ms-overflow-style: none; /* Oculta a barra de rolagem no Internet Explorer */
+}
+
+.listServices::-webkit-scrollbar {
+    background: #cecece;
+    width: 10px;
+    border-radius: 50px;
+}
+
+.listServices::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #01a94e;
+  }
