@@ -19,7 +19,7 @@ export function SobreNos() {
             </Grid>
             <Grid className={styles.img} item xs={12} md={4}>
                 <Image
-                    src="/quemsomos.png"
+                    src="/bolha.png"
                     width={400}
                     height={400}
                     alt="Quem Somos"
