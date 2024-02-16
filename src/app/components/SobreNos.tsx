@@ -63,7 +63,7 @@ export function SobreNos() {
           Fundada em janeiro de 2020 em Dourados/MS, a UnitsGeo é uma empresa
           especializada em consultoria ambiental e topográfica, atendendo em
           todo o estado de Mato Grosso do Sul, Mato Grosso e Paraná. Com uma
-          equipe de profissionais qualificados, estamos comprometidos em
+          equipe de profissionais qualificados, comprometidos em
           entregar resultados sob medida para cada cliente, sempre alinhados às
           suas necessidades específicas.
         </Typography>
@@ -78,7 +78,7 @@ export function SobreNos() {
         >
           Equipada com tecnologia de ponta no mercado topográfico, a UnitsGeo
           oferece serviços de alta qualidade e precisão, essenciais para a
-          elaboração e execução de projetos bem-sucedidos. Estamos prontos para
+          elaboração e execução de projetos bem-sucedidos. A UnitsGeo está pronta para
           ajudar sua empresa com serviços profissionais, ágeis e de qualidade,
           tanto em questões topográficas quanto ambientais.
         </Typography>

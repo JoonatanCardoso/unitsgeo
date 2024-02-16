@@ -1,9 +1,8 @@
 .container {
     display: row;
-    width: 100vw;
+    min-width: 100vw;
     justify-content: center;
     align-items: center;
-    background-color: white;
     border-top: 20px solid #00a94e;
     text-align: center;
     padding-top: 5vh;

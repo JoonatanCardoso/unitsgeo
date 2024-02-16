@@ -146,27 +146,27 @@ export function Servicos() {
           }}
         >
           <ListItem alignItems="center">
-            <ListItemText primary="Georreferenciamento de imóvel rural no SIGEF/Incra." />
+            <ListItemText primary="Georreferenciamento de imóvel rural no SIGEF/Incra" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Desmembragem e remembragem de imóveis rurais." />
+            <ListItemText primary="Desmembragem e remembragem de imóveis rurais" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Levantamentos topográficos planimétricos e planialtimétricos." />
+            <ListItemText primary="Levantamentos topográficos planimétricos e planialtimétricos" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Locações e acompanhamento de obras." />
+            <ListItemText primary="Locações e acompanhamento de obras" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Projetos para ação de asucapião e regularização de imóveis." />
+            <ListItemText primary="Projetos para ação de asucapião e regularização de imóveis" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Atualização e cadastro de ITR e CCIR." />
+            <ListItemText primary="Atualização e cadastro de ITR e CCIR" />
           </ListItem>
         </List>
       </Grid>
@@ -230,27 +230,27 @@ export function Servicos() {
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Projetos de gerenciamento de resíduos." />
+            <ListItemText primary="Projetos de gerenciamento de resíduos" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Estudo de impacto ambiental - EIA e relação de controle ambiental - RCA." />
+            <ListItemText primary="Estudo de impacto ambiental - EIA e relação de controle ambiental - RCA" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Projeto de recuperação de área degradada ou alterada - PRADA." />
+            <ListItemText primary="Projeto de recuperação de área degradada ou alterada - PRADA" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Cadastro ambiental rural - CAR." />
+            <ListItemText primary="Cadastro ambiental rural - CAR" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Regularização de reserva legal." />
+            <ListItemText primary="Regularização de reserva legal" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
-            <ListItemText primary="Outorga de recursos hídricos." />
+            <ListItemText primary="Outorga de recursos hídricos" />
           </ListItem>
         </List>
       </Grid>

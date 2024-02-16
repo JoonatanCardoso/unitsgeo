@@ -11,9 +11,7 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemIcon,
   ListItemText,
-  Stack,
 } from "@mui/material";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -28,12 +26,10 @@ export default function Layout() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   useState(() => {
     console.log("in useState");
   });
-
-  
 
   const [state, setState] = React.useState({
     left: false,
@@ -59,16 +55,43 @@ export default function Layout() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemText primary="Sobre Nós" />
+      <List sx={{ width: "100%", minWidth: 360 }}>
+        <ListItem>
+          <Image
+            className={styles.logoMobile}
+            src="/logo.png"
+            alt="Logo UnitsGeo"
+            priority={true}
+            width={150}
+            height={43}
+          />
+        </ListItem>
+        <Divider variant="middle" component="li" />
+        <ListItem>
+          <ListItemButton onClick={() => scrollToSection("sobre")}>
+            Sobre Nós
           </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Serviços" />
+        </ListItem>
+        <Divider variant="middle" component="li" />
+        <ListItem>
+          <ListItemButton onClick={() => scrollToSection("servicos")}>
+            Serviços
           </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Contatos" />
+        </ListItem>
+        <Divider variant="middle" component="li" />
+        <ListItem>
+          <ListItemButton onClick={() => scrollToSection("contatos")}>
+            Contatos
+          </ListItemButton>
+        </ListItem>
+        <Divider variant="middle" component="li" />
+        <ListItem>
+          <ListItemButton
+            href="https://wa.me/5567998436686?text=Ol%C3%A1%2C+quero+solicitar+uma+cota%C3%A7%C3%A3o+com+a+UnitsGeo%21"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Solicitar Cotação
           </ListItemButton>
         </ListItem>
       </List>
@@ -157,15 +180,16 @@ export default function Layout() {
             </React.Fragment>
           ))}
         </div>
-        
+
         {isDesktop && (
           <Grid
             justifyContent="right"
             container
-            xs={12} md={9}
+            xs={12}
+            md={9}
             sx={{ flexDirection: { xs: "row", md: "row" } }}
           >
-            <Grid className={styles.img} item xs={12} md={ isDesktop ? 2 : 3}>
+            <Grid className={styles.img} item xs={12} md={isDesktop ? 2 : 3}>
               <Button
                 className={styles.button}
                 onClick={() => scrollToSection("sobre")}
@@ -173,7 +197,7 @@ export default function Layout() {
                 Sobre Nós
               </Button>
             </Grid>
-            <Grid className={styles.img} item xs={12} md={ isDesktop ? 2 : 3}>
+            <Grid className={styles.img} item xs={12} md={isDesktop ? 2 : 3}>
               <Button
                 className={styles.button}
                 onClick={() => scrollToSection("servicos")}
@@ -181,12 +205,22 @@ export default function Layout() {
                 Serviços
               </Button>
             </Grid>
-            <Grid className={styles.img} item xs={12} md={ isDesktop ? 2 : 3}>
+            <Grid className={styles.img} item xs={12} md={isDesktop ? 2 : 3}>
               <Button
                 className={styles.button}
                 onClick={() => scrollToSection("contatos")}
               >
                 Contatos
+              </Button>
+            </Grid>
+            <Grid className={styles.img} item xs={12} md={isDesktop ? 3 : 3}>
+              <Button
+                className={styles.button}
+                href="https://wa.me/5567998436686?text=Ol%C3%A1%2C+quero+solicitar+uma+cota%C3%A7%C3%A3o+com+a+UnitsGeo%21"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Solicitar Cotação
               </Button>
             </Grid>
           </Grid>
