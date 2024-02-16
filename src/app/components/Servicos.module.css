@@ -11,23 +11,30 @@
         padding: 10vh;
     }
     .img {
-        margin-left: 100px;
+        margin: 50px;
     }
 }
 
 @media (min-width: 961px) {
     .img {
-        margin-right: 100px;
+        margin: 20px;
     }
 }
 
 .info {
     display: flex;
-    width: 50vw;
-    min-height: 15vh;
     justify-content: center;
+    text-align: center;
     align-items: center;
     transition: transform 1s;
+}
+
+.infoIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #01a94e;
+    border-radius: 50px;
 }
 
 .info:hover {
@@ -64,9 +71,9 @@
 }
 
 .listServices {
-    overflow-y: scroll; /* Adiciona a barra de rolagem vertical */
-    scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
-    -ms-overflow-style: none; /* Oculta a barra de rolagem no Internet Explorer */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .listServices::-webkit-scrollbar {

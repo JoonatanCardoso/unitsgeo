@@ -8,9 +8,10 @@ import {
   ListItem,
   ListItemText,
   Typography,
+  Button,
 } from "@mui/material";
 import styles from "./Servicos.module.css";
-import Image from "next/image";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 export function Servicos() {
   const ref = useRef(null);
@@ -41,8 +42,8 @@ export function Servicos() {
       img: "/images/s12.jpg",
       title: "Topografia",
     },
-  ])
-  
+  ]);
+
   const [itemAmbiental] = useState([
     {
       img: "/images/s1.jpg",
@@ -68,10 +69,9 @@ export function Servicos() {
       img: "/images/s6.jpg",
       title: "Ambiental",
     },
-  ])
+  ]);
 
   useEffect(() => {
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         console.log("entry", entry);
@@ -168,20 +168,18 @@ export function Servicos() {
         </List>
       </Grid>
 
-      <Grid className={styles.info} item xs={12} md={12} my={5}>
-        <Grid
-          className={styles.info}
-          container
-          sx={{ flexDirection: { xs: "row", md: "row" } }}
-          style={{
-            backgroundImage: "url(/images/info.png)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            transition: "opacity 3.5s",
-            opacity: isVisible ? 1 : 0,
-          }}
-        />
+      <Grid className={styles.info} container xs={12} md={12} my={5}>
+        <Grid className={styles.infoIcon} item xs={11} md={6}>
+          <CheckCircleIcon sx={{marginRight: 2, color: 'white'}} fontSize="large" />
+          <Typography
+            className={styles.title}
+            color="white"
+            variant="h5"
+            component="h5"
+          >
+            Especializado em Regularização de Imóveis Rurais
+          </Typography>
+        </Grid>
       </Grid>
 
       <Grid item xs={11} md={5} my={5}>
