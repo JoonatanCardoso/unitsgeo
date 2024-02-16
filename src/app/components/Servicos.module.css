@@ -11,13 +11,13 @@
         padding: 10vh;
     }
     .img {
-        margin-right: 100px;
+        margin-left: 100px;
     }
 }
 
-@media (max-width: 961px) {
+@media (min-width: 961px) {
     .img {
-        margin-left: 100px;
+        margin-right: 100px;
     }
 }
 
