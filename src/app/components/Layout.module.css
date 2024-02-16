@@ -1,22 +1,38 @@
 .main {
-    display: flex;
+    display: row;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 10vh;
     background-color: white;
     color: black;
 }
 
 .container {
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left:10vw;
+    padding-right:10vw;
+}
+
+.navbarSocial {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #01a94e;
+    padding-left:10vw;
+    padding-right:10vw;
+    direction: rtl;
 }
 
 .menu {
     direction: rtl;
     flex: 1;
+}
+
+.iconsMenu {
+    margin: 5px;
 }
 
 .button {

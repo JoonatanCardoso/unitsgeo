@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { useState } from 'react'
 import styles from './Layout.module.css'
-import { Box, Button, Container, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack } from '@mui/material';
+import { Box, Button, Container, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack } from '@mui/material';
 import Image from 'next/image'
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
@@ -82,8 +82,31 @@ export function Layout () {
     const isMobile = useMediaQuery('(max-width: 960px)');
 
     return (
-        <main className={styles.main}>
-            <Container className={styles.container}>
+        <Grid className={styles.main}>
+            <Grid xs={12} md={12} className={styles.navbarSocial}>
+                <Image
+                    className={styles.iconsMenu}
+                    src='/iconInsta.png'
+                    alt='Instagram'
+                    height={25}
+                    width={25}
+                />
+                <Image
+                    className={styles.iconsMenu}
+                    src='/iconWhats.png'
+                    alt='Instagram'
+                    height={25}
+                    width={25}
+                />
+                <Image
+                    className={styles.iconsMenu}
+                    src='/iconMaps.png'
+                    alt='Instagram'
+                    height={25}
+                    width={25}
+                />
+            </Grid>
+            <Grid xs={12} md={12} className={styles.container}>
                 <Image
                     src="/logo.png"
                     alt="Logo UnitsGeo"
@@ -118,7 +141,7 @@ export function Layout () {
                         </React.Fragment>
                     ))}
                 </div>
-            </Container>
-        </main>
+            </Grid>
+        </Grid>
     )
 }
