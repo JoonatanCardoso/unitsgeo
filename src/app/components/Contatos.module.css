@@ -1,0 +1,29 @@
+.container {
+    display: row;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.title {
+    font-weight: 800;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.paragraph {
+    font-weight: 600;
+    text-align: justify;
+    padding-bottom: 5px;
+}
+
+.imageMaps {
+    border-top: 10px solid #00a94e;
+    border-bottom: 10px solid #00a94e;
+}
