@@ -13,9 +13,10 @@ export function SobreNos() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          console.log("isVisible", isVisible)
         }
       },
-      { threshold: 0.5 } // ajuste conforme necessário
+      { threshold: 0.5 }
     );
 
     if (ref.current) {
@@ -85,7 +86,7 @@ export function SobreNos() {
       </Grid>
       <Grid className={styles.img} item xs={12} md={4}>
         <Image
-          src="/bolha.png"
+          src="/images/bolha.png"
           width={isMobile ? 350 : 400}
           height={isMobile ? 350 : 400}
           alt="Quem Somos"

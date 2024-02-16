@@ -4,7 +4,7 @@ import styles from "./Carousel.module.css";
 
 export function Carousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ["/b1.png", "/b2.png", "/b3.png", "/b4.png"];
+  const images = ["/images/b1.png", "/images/b2.png", "/images/b3.png", "/images/b4.png"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,7 +19,8 @@ export function Carousel() {
       className={styles.container}
       container
       sx={{
-        flexDirection: { xs: "column", md: "row" },
+        flexDirection: { xs: "row", md: "row" },
+        width: "100vw",
         position: "relative",
         overflow: "hidden",
       }}

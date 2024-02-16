@@ -1,85 +1,87 @@
 import React, { useRef, useEffect, useState } from "react";
 import {
   List,
-  Avatar,
   Divider,
   Grid,
   ImageList,
   ImageListItem,
   ListItem,
-  ListItemAvatar,
   ListItemText,
   Typography,
 } from "@mui/material";
 import styles from "./Servicos.module.css";
 import Image from "next/image";
 
-const itemAmbiental = [
-  {
-    img: "/s1.jpg",
-    title: "Ambiental",
-  },
-  {
-    img: "/s2.jpg",
-    title: "Ambiental",
-  },
-  {
-    img: "/s3.jpg",
-    title: "Ambiental",
-  },
-  {
-    img: "/s4.jpg",
-    title: "Ambiental",
-  },
-  {
-    img: "/s5.jpg",
-    title: "Ambiental",
-  },
-  {
-    img: "/s6.jpg",
-    title: "Ambiental",
-  },
-];
-
-const itemTopografia = [
-  {
-    img: "/s7.jpg",
-    title: "Topografia",
-  },
-  {
-    img: "/s8.jpg",
-    title: "Topografia",
-  },
-  {
-    img: "/s9.jpg",
-    title: "Topografia",
-  },
-  {
-    img: "/s10.jpg",
-    title: "Topografia",
-  },
-  {
-    img: "/s11.jpg",
-    title: "Topografia",
-  },
-  {
-    img: "/s12.jpg",
-    title: "Topografia",
-  },
-];
-
 export function Servicos() {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  const [itemTopografia] = useState([
+    {
+      img: "/images/s7.jpg",
+      title: "Topografia",
+    },
+    {
+      img: "/images/s8.jpg",
+      title: "Topografia",
+    },
+    {
+      img: "/images/s9.jpg",
+      title: "Topografia",
+    },
+    {
+      img: "/images/s10.jpg",
+      title: "Topografia",
+    },
+    {
+      img: "/images/s11.jpg",
+      title: "Topografia",
+    },
+    {
+      img: "/images/s12.jpg",
+      title: "Topografia",
+    },
+  ])
+  
+  const [itemAmbiental] = useState([
+    {
+      img: "/images/s1.jpg",
+      title: "Ambiental",
+    },
+    {
+      img: "/images/s2.jpg",
+      title: "Ambiental",
+    },
+    {
+      img: "/images/s3.jpg",
+      title: "Ambiental",
+    },
+    {
+      img: "/images/s4.jpg",
+      title: "Ambiental",
+    },
+    {
+      img: "/images/s5.jpg",
+      title: "Ambiental",
+    },
+    {
+      img: "/images/s6.jpg",
+      title: "Ambiental",
+    },
+  ])
+
   useEffect(() => {
+
     const observer = new IntersectionObserver(
       ([entry]) => {
+        console.log("entry", entry);
+
         if (entry.isIntersecting) {
           setIsVisible(true);
+          console.log("isVisibleisVisibleisVisible", isVisible);
         }
       },
-      { threshold: 0.5 } // ajuste conforme necessário
+      { threshold: 0.5 }
     );
 
     if (ref.current) {
@@ -95,28 +97,23 @@ export function Servicos() {
 
   return (
     <Grid
-      ref={ref}
-      id={'servicos'}
+      id={"servicos"}
       className={styles.container}
       container
-      sx={{ flexDirection: { xs: "column", md: "row" } }}
       style={{
-        backgroundImage: "url(/fundo.png)",
+        backgroundImage: "url(/images/fundo.png)",
+        width: "100vw",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        transition: "opacity 1.5s",
+        opacity: isVisible ? 1 : 0,
       }}
     >
-      <Grid className={styles.img} item xs={10} md={5} my={5}>
+      <Grid ref={ref} className={styles.img} item xs={10} md={5} my={5}>
         <ImageList variant="woven" cols={3} gap={8}>
           {itemTopografia.map((item) => (
-            <ImageListItem
-              key={item.img}
-              style={{
-                transition: "opacity 1.5s",
-                opacity: isVisible ? 1 : 0,
-              }}
-            >
+            <ImageListItem key={item.img}>
               <img
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -139,7 +136,7 @@ export function Servicos() {
         <List
           className={styles.listServices}
           sx={{
-            width: "100%",
+            width: "100vw",
             maxWidth: 500,
             maxHeight: 300,
             overflowY: "auto",
@@ -177,7 +174,7 @@ export function Servicos() {
           container
           sx={{ flexDirection: { xs: "row", md: "row" } }}
           style={{
-            backgroundImage: "url(/info.png)",
+            backgroundImage: "url(/images/info.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -257,13 +254,7 @@ export function Servicos() {
       <Grid className={styles.img} item xs={10} md={5} my={5}>
         <ImageList variant="woven" cols={3} gap={8}>
           {itemAmbiental.map((item) => (
-            <ImageListItem
-              key={item.img}
-              style={{
-                transition: "opacity 5.5s",
-                opacity: isVisible ? 1 : 0,
-              }}
-            >
+            <ImageListItem key={item.img}>
               <img
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 src={`${item.img}?w=248&fit=crop&auto=format`}

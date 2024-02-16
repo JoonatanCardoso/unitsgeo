@@ -55,11 +55,11 @@ export default function Layout() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List sx={{ width: "100%", minWidth: 360 }}>
+      <List sx={{ width: "100vw", minWidth: 360 }}>
         <ListItem>
           <Image
             className={styles.logoMobile}
-            src="/logo.png"
+            src="/images/logo.png"
             alt="Logo UnitsGeo"
             priority={true}
             width={150}
@@ -103,7 +103,7 @@ export default function Layout() {
 
   return (
     <Grid className={styles.main}>
-      <Grid xs={12} md={12} className={styles.navbarSocial}>
+      <Grid className={styles.navbarSocial}>
         <a
           href="https://www.instagram.com/unitsgeo/"
           target="_blank"
@@ -111,7 +111,7 @@ export default function Layout() {
         >
           <Image
             className={styles.iconsMenu}
-            src="/iconInsta.png"
+            src="/images/iconInsta.png"
             alt="Instagram"
             height={25}
             width={25}
@@ -124,7 +124,7 @@ export default function Layout() {
         >
           <Image
             className={styles.iconsMenu}
-            src="/iconWhats.png"
+            src="/images/iconWhats.png"
             alt="Instagram"
             height={25}
             width={25}
@@ -137,7 +137,7 @@ export default function Layout() {
         >
           <Image
             className={styles.iconsMenu}
-            src="/iconMaps.png"
+            src="/images/iconMaps.png"
             alt="Instagram"
             height={25}
             width={25}
@@ -147,16 +147,17 @@ export default function Layout() {
       <Grid
         className={styles.container}
         container
+        padding={1}
         sx={{ flexDirection: { xs: "row", md: "row" } }}
         style={{
-          backgroundImage: "url(/navbar.jpg)",
+          backgroundImage: "url(/images/navbar.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
         }}
       >
         <Image
-          src="/logo-preto.png"
+          src="/images/logo-preto.png"
           alt="Logo UnitsGeo"
           priority={true}
           width={150}

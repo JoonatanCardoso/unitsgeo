@@ -39,7 +39,8 @@ export function Contatos() {
       container
       sx={{ flexDirection: { xs: "row", md: "row" } }}
       style={{
-        backgroundImage: "url(/footer.jpg)",
+        backgroundImage: "url(/images/footer.jpg)",
+        width: "100vw",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -50,7 +51,7 @@ export function Contatos() {
         xs={12}
         md={12}
         style={{
-          width: "100%",
+          width: "100vw",
           height: "400px",
           position: "relative",
           overflow: "hidden",
@@ -63,7 +64,7 @@ export function Contatos() {
         >
           <Image
             className={styles.imageMaps}
-            src="/maps.jpg"
+            src="/images/maps.jpg"
             alt="Mapa"
             layout="fill"
             objectFit="cover"
@@ -81,7 +82,7 @@ export function Contatos() {
         style={{ transition: "opacity 2.5s", opacity: isVisible ? 1 : 0 }}
       >
         <Image
-          src="/logo.png"
+          src="/images/logo.png"
           alt="Logo UnitsGeo"
           priority={true}
           width={300}
