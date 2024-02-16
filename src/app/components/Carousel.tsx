@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Grid } from "@mui/material";
+import { Grid, useMediaQuery } from "@mui/material";
 import styles from "./Carousel.module.css";
 
 export function Carousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = ["/images/b1.png", "/images/b2.png", "/images/b3.png", "/images/b4.png"];
+  const images = ["/images/bloco1.jpg", "/images/bloco2.jpg", "/images/bloco3.jpg", "/images/bloco4.jpg", "/images/bloco5.jpg"];
+  const isMobile = useMediaQuery("(max-width: 960px)");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,7 +33,7 @@ export function Carousel() {
           alt={`Slide ${index}`}
           style={{
             width: "100vw",
-            height: "100vh",
+            height: isMobile ? "60vh" : "100vh",
             objectFit: "cover",
             position: "absolute",
             transition: "opacity 3s ease-in-out",

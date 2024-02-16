@@ -33,6 +33,9 @@
     padding-right:10vw;
     direction: rtl;
 }
+.navbarSocial a {
+    text-decoration: none;
+}
 
 .menu {
     direction: rtl;

@@ -6,7 +6,7 @@
     background-color: white;
     border-top: 10px solid #00a94e;
 }
-@media (min-width: 961px) {
+@media (min-width: 960px) {
     .container {
         padding: 10vh;
     }
@@ -15,7 +15,7 @@
     }
 }
 
-@media (min-width: 961px) {
+@media (max-width: 961px) {
     .img {
         margin: 20px;
     }
