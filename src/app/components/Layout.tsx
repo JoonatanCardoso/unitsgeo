@@ -1,147 +1,197 @@
-'use client'
-import * as React from 'react';
-import { useState } from 'react'
-import styles from './Layout.module.css'
-import { Box, Button, Container, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack } from '@mui/material';
-import Image from 'next/image'
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-import useMediaQuery from '@mui/material/useMediaQuery';
+"use client";
+import * as React from "react";
+import { useState } from "react";
+import styles from "./Layout.module.css";
+import {
+  Box,
+  Button,
+  Divider,
+  Drawer,
+  Grid,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Stack,
+} from "@mui/material";
+import Image from "next/image";
+import MenuIcon from "@mui/icons-material/Menu";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
-interface NavLink {
-    name: string,
-    href: string,
-}
+type Anchor = "left";
 
-const navLinks: NavLink[] = [
-    { name: 'Contatos', href: '#' },
-    { name: 'Sobre nós', href: '#' },
-    { name: 'Inicio', href: '#' }
-]
+export default function Layout() {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
+  useState(() => {
+    console.log("in useState");
+  });
 
-type Anchor = 'left';
+  
 
-export function Layout () {
-    useState(() => {
-        console.log('in useState')
-    });
+  const [state, setState] = React.useState({
+    left: false,
+  });
 
-    const [state, setState] = React.useState({
-        left: false,
-    });
-    
-    const toggleDrawer =
-        (anchor: Anchor, open: boolean) =>
-        (event: React.KeyboardEvent | React.MouseEvent) => {
-            if (
-                event.type === 'keydown' &&
-                ((event as React.KeyboardEvent).key === 'Tab' ||
-                (event as React.KeyboardEvent).key === 'Shift')
-            ) {
-                return;
-            }
-        
-            setState({ ...state, [anchor]: open });
-        };
-    
-    const list = (anchor: Anchor) => (
-        <Box
-            role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
+  const toggleDrawer =
+    (anchor: Anchor, open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+
+      setState({ ...state, [anchor]: open });
+    };
+
+  const list = (anchor: Anchor) => (
+    <Box
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemText primary="Sobre Nós" />
+          </ListItemButton>
+          <ListItemButton>
+            <ListItemText primary="Serviços" />
+          </ListItemButton>
+          <ListItemButton>
+            <ListItemText primary="Contatos" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </Box>
+  );
+
+  const isMobile = useMediaQuery("(max-width: 960px)");
+  const isDesktop = useMediaQuery("(min-width: 960px)");
+
+  return (
+    <Grid className={styles.main}>
+      <Grid xs={12} md={12} className={styles.navbarSocial}>
+        <a
+          href="https://www.instagram.com/unitsgeo/"
+          target="_blank"
+          rel="noreferrer"
         >
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Box>
-    );
-
-    const isMobile = useMediaQuery('(max-width: 960px)');
-
-    return (
-        <Grid className={styles.main}>
-            <Grid xs={12} md={12} className={styles.navbarSocial}>
-                <Image
-                    className={styles.iconsMenu}
-                    src='/iconInsta.png'
-                    alt='Instagram'
-                    height={25}
-                    width={25}
-                />
-                <Image
-                    className={styles.iconsMenu}
-                    src='/iconWhats.png'
-                    alt='Instagram'
-                    height={25}
-                    width={25}
-                />
-                <Image
-                    className={styles.iconsMenu}
-                    src='/iconMaps.png'
-                    alt='Instagram'
-                    height={25}
-                    width={25}
-                />
+          <Image
+            className={styles.iconsMenu}
+            src="/iconInsta.png"
+            alt="Instagram"
+            height={25}
+            width={25}
+          />
+        </a>
+        <a
+          href="https://wa.me/5567998436686?text=Ol%C3%A1%2C+gostaria+de+fazer+uma+cota%C3%A7%C3%A3o+com+a+UnitsGeo%21"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            className={styles.iconsMenu}
+            src="/iconWhats.png"
+            alt="Instagram"
+            height={25}
+            width={25}
+          />
+        </a>
+        <a
+          href="https://maps.app.goo.gl/cfPZopzhS9yjKxbN7"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            className={styles.iconsMenu}
+            src="/iconMaps.png"
+            alt="Instagram"
+            height={25}
+            width={25}
+          />
+        </a>
+      </Grid>
+      <Grid
+        className={styles.container}
+        container
+        sx={{ flexDirection: { xs: "row", md: "row" } }}
+        style={{
+          backgroundImage: "url(/navbar.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "top",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Image
+          src="/logo-preto.png"
+          alt="Logo UnitsGeo"
+          priority={true}
+          width={150}
+          height={43}
+        />
+        <div>
+          {(["left"] as const).map((anchor) => (
+            <React.Fragment key={anchor}>
+              {isMobile && (
+                <Button onClick={toggleDrawer(anchor, true)}>
+                  <MenuIcon sx={{ color: "black" }} />
+                </Button>
+              )}
+              <Drawer
+                anchor={anchor}
+                open={state[anchor]}
+                onClose={toggleDrawer(anchor, false)}
+              >
+                {list(anchor)}
+              </Drawer>
+            </React.Fragment>
+          ))}
+        </div>
+        
+        {isDesktop && (
+          <Grid
+            justifyContent="right"
+            container
+            xs={12} md={9}
+            sx={{ flexDirection: { xs: "row", md: "row" } }}
+          >
+            <Grid className={styles.img} item xs={12} md={ isDesktop ? 2 : 3}>
+              <Button
+                className={styles.button}
+                onClick={() => scrollToSection("sobre")}
+              >
+                Sobre Nós
+              </Button>
             </Grid>
-            <Grid xs={12} md={12} className={styles.container}>
-                <Image
-                    src="/logo.png"
-                    alt="Logo UnitsGeo"
-                    priority={true}
-                    width={150}
-                    height={43}
-                />
-                <Stack className={styles.menu} spacing={2} direction='row'>
-                    {navLinks.map((link, index) => (
-                        <Button
-                            key={index}
-                            className={styles.button}>
-                                {link.name}
-                        </Button>
-                    ))}
-                </Stack>
-                <div>
-                    {(['left'] as const).map((anchor) => (
-                        <React.Fragment key={anchor}>
-                        {isMobile && (
-                            <Button onClick={toggleDrawer(anchor, true)}>
-                                <MenuIcon sx={{color: '#01a94e'}} />    
-                            </Button>
-                        )}
-                        <Drawer
-                            anchor={anchor}
-                            open={state[anchor]}
-                            onClose={toggleDrawer(anchor, false)}
-                        >
-                            {list(anchor)}
-                        </Drawer>
-                        </React.Fragment>
-                    ))}
-                </div>
+            <Grid className={styles.img} item xs={12} md={ isDesktop ? 2 : 3}>
+              <Button
+                className={styles.button}
+                onClick={() => scrollToSection("servicos")}
+              >
+                Serviços
+              </Button>
             </Grid>
-        </Grid>
-    )
+            <Grid className={styles.img} item xs={12} md={ isDesktop ? 2 : 3}>
+              <Button
+                className={styles.button}
+                onClick={() => scrollToSection("contatos")}
+              >
+                Contatos
+              </Button>
+            </Grid>
+          </Grid>
+        )}
+      </Grid>
+    </Grid>
+  );
 }

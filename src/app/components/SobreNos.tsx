@@ -1,30 +1,100 @@
-import { Box, Grid, Typography } from '@mui/material';
-import React from 'react';
-import styles from './SobreNos.module.css'
-import Image from 'next/image';
+import { Fade, Grid, Typography, useMediaQuery } from "@mui/material";
+import React, { useRef, useEffect, useState } from "react";
+import styles from "./SobreNos.module.css";
+import Image from "next/image";
 
 export function SobreNos() {
-    return (
-        <Grid className={styles.container} container spacing={1} sx={{ flexDirection: { xs: 'column', md: 'row' } }}>
-            <Grid item xs={12} md={5}>
-                <Typography className={styles.title} color='black' variant='h4' component="h4">
-                    Sobre nós
-                </Typography>
-                <Typography className={styles.paragraph} color='black' variant='subtitle1'>
-                    Fundada em janeiro de 2020 em Dourados/MS, a UnitsGeo é uma empresa especializada em consultoria ambiental e topográfica, atendendo em todo o estado de Mato Grosso do Sul, Mato Grosso e Paraná. Com uma equipe de profissionais qualificados, estamos comprometidos em entregar resultados sob medida para cada cliente, sempre alinhados às suas necessidades específicas.
-                </Typography>
-                <Typography className={styles.paragraph} color='black' variant='subtitle1'>
-                    Equipada com tecnologia de ponta no mercado topográfico, a UnitsGeo oferece serviços de alta qualidade e precisão, essenciais para a elaboração e execução de projetos bem-sucedidos. Estamos prontos para ajudar sua empresa com serviços profissionais, ágeis e de qualidade, tanto em questões topográficas quanto ambientais.
-                </Typography>
-            </Grid>
-            <Grid className={styles.img} item xs={12} md={4}>
-                <Image
-                    src="/bolha.png"
-                    width={400}
-                    height={400}
-                    alt="Quem Somos"
-                />
-            </Grid>
-        </Grid>
-    )
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 960px)");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.5 } // ajuste conforme necessário
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <Grid
+      className={styles.container}
+      id={'sobre'}
+      justifyContent="center"
+      container
+      spacing={1}
+      sx={{ flexDirection: { xs: "row", md: "row" } }}
+    >
+      <Grid ref={ref} item xs={11} md={5}>
+        <Typography
+          className={styles.title}
+          color="black"
+          variant="h4"
+          component="h4"
+          style={{
+            transition: "opacity 0.5s",
+            opacity: isVisible ? 1 : 0,
+          }}
+        >
+          Sobre nós
+        </Typography>
+        <Typography
+          className={styles.paragraph}
+          color="black"
+          variant="subtitle1"
+          style={{
+            transition: "opacity 1s",
+            opacity: isVisible ? 1 : 0,
+          }}
+        >
+          Fundada em janeiro de 2020 em Dourados/MS, a UnitsGeo é uma empresa
+          especializada em consultoria ambiental e topográfica, atendendo em
+          todo o estado de Mato Grosso do Sul, Mato Grosso e Paraná. Com uma
+          equipe de profissionais qualificados, estamos comprometidos em
+          entregar resultados sob medida para cada cliente, sempre alinhados às
+          suas necessidades específicas.
+        </Typography>
+        <Typography
+          className={styles.paragraph}
+          color="black"
+          variant="subtitle1"
+          style={{
+            transition: "opacity 2s",
+            opacity: isVisible ? 1 : 0,
+          }}
+        >
+          Equipada com tecnologia de ponta no mercado topográfico, a UnitsGeo
+          oferece serviços de alta qualidade e precisão, essenciais para a
+          elaboração e execução de projetos bem-sucedidos. Estamos prontos para
+          ajudar sua empresa com serviços profissionais, ágeis e de qualidade,
+          tanto em questões topográficas quanto ambientais.
+        </Typography>
+      </Grid>
+      <Grid className={styles.img} item xs={12} md={4}>
+        <Image
+          src="/bolha.png"
+          width={isMobile ? 350 : 400}
+          height={isMobile ? 350 : 400}
+          alt="Quem Somos"
+          style={{
+            transition: "opacity 5s",
+            opacity: isVisible ? 1 : 0,
+          }}
+        />
+      </Grid>
+    </Grid>
+  );
 }

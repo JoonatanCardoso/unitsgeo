@@ -1,11 +1,32 @@
 .container {
     display: row;
     width: 100vw;
-    padding: 10vh;
     justify-content: center;
     align-items: center;
     background-color: white;
+    border-top: 10px solid #00a94e;
 }
+@media (min-width: 961px) {
+    .container {
+        padding: 10vh;
+    }
+    .img {
+        margin-right: 100px;
+    }
+}
+
+.info {
+    display: flex;
+    width: 50vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+}
+
+.info:hover {
+    transform: scale(1.02);
+  }
 
 .title {
     font-weight: 800;
@@ -21,9 +42,19 @@
 
 .img {
     display: row;
-    margin-right: 100px;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 961px) {
+    .info {
+        display: flex;
+        width: 100vw;
+        height: 10vh;
+        justify-content: center;
+        align-items: center;
+        transition: transform 1s;
+    }
 }
 
 .listServices {

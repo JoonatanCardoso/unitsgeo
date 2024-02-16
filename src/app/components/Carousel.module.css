@@ -1,3 +1,7 @@
-.imageBanner {
-    border-bottom: 20px solid #00a94e;
+.container {
+    display: row;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
 }
