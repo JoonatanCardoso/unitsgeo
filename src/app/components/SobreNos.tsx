@@ -13,7 +13,7 @@ export function SobreNos() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          console.log("isVisible", isVisible)
+          console.log("isVisible", isVisible);
         }
       },
       { threshold: 0.5 }
@@ -33,7 +33,7 @@ export function SobreNos() {
   return (
     <Grid
       className={styles.container}
-      id={'sobre'}
+      id={"sobre"}
       justifyContent="center"
       container
       spacing={1}
@@ -64,9 +64,9 @@ export function SobreNos() {
           Fundada em janeiro de 2020 em Dourados/MS, a UnitsGeo é uma empresa
           especializada em consultoria ambiental e topográfica, atendendo em
           todo o estado de Mato Grosso do Sul, Mato Grosso e Paraná. Com uma
-          equipe de profissionais qualificados, comprometidos em
-          entregar resultados sob medida para cada cliente, sempre alinhados às
-          suas necessidades específicas.
+          equipe de profissionais qualificados, comprometidos em entregar
+          resultados sob medida para cada cliente, sempre alinhados às suas
+          necessidades específicas.
         </Typography>
         <Typography
           className={styles.paragraph}
@@ -77,11 +77,11 @@ export function SobreNos() {
             opacity: isVisible ? 1 : 0,
           }}
         >
-          Equipada com tecnologia de ponta no mercado topográfico, a UnitsGeo
-          oferece serviços de alta qualidade e precisão, essenciais para a
-          elaboração e execução de projetos bem-sucedidos. A UnitsGeo está pronta para
-          ajudar sua empresa com serviços profissionais, ágeis e de qualidade,
-          tanto em questões topográficas quanto ambientais.
+          Equipada com tecnologia de ponta no mercado topográfico, oferecendo
+          serviços de alta qualidade e precisão, essenciais para a elaboração e
+          execução de projetos bem-sucedidos. A UnitsGeo está pronta para ajudar
+          sua empresa com serviços profissionais, ágeis e de qualidade, tanto em
+          questões topográficas quanto ambientais.
         </Typography>
       </Grid>
       <Grid className={styles.img} item xs={12} md={4}>

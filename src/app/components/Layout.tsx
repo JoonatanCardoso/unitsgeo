@@ -194,6 +194,7 @@ export default function Layout() {
               <Button
                 className={styles.button}
                 onClick={() => scrollToSection("sobre")}
+                sx={{ color: '#000'}}
               >
                 Sobre Nós
               </Button>
@@ -202,6 +203,7 @@ export default function Layout() {
               <Button
                 className={styles.button}
                 onClick={() => scrollToSection("servicos")}
+                sx={{ color: '#000'}}
               >
                 Serviços
               </Button>
@@ -210,6 +212,7 @@ export default function Layout() {
               <Button
                 className={styles.button}
                 onClick={() => scrollToSection("contatos")}
+                sx={{ color: '#000'}}
               >
                 Contatos
               </Button>
@@ -220,6 +223,7 @@ export default function Layout() {
                 href="https://wa.me/5567998436686?text=Ol%C3%A1%2C+quero+solicitar+uma+cota%C3%A7%C3%A3o+com+a+UnitsGeo%21"
                 target="_blank"
                 rel="noreferrer"
+                sx={{ color: '#000'}}
               >
                 Solicitar Cotação
               </Button>
