@@ -205,27 +205,7 @@ export function Servicos() {
           }}
         >
           <ListItem alignItems="center">
-            <ListItemText primary="Licenciamento de Atividades Rurais e Urbanas" />
-          </ListItem>
-          <Divider variant="middle" component="li" />
-          <ListItem alignItems="flex-start">
-            <ListItemText primary="Autorização ambiental" />
-          </ListItem>
-          <Divider variant="middle" component="li" />
-          <ListItem alignItems="flex-start">
-            <ListItemText primary="Licença ambiental simplificada - L.S." />
-          </ListItem>
-          <Divider variant="middle" component="li" />
-          <ListItem alignItems="flex-start">
-            <ListItemText primary="Licença Prévia - L.P." />
-          </ListItem>
-          <Divider variant="middle" component="li" />
-          <ListItem alignItems="flex-start">
-            <ListItemText primary="Licença Instalação - L.I." />
-          </ListItem>
-          <Divider variant="middle" component="li" />
-          <ListItem alignItems="flex-start">
-            <ListItemText primary="Licença de Operação - L.O." />
+            <ListItemText primary="Licenciamento Ambiental de Atividades Rurais e Urbanas" />
           </ListItem>
           <Divider variant="middle" component="li" />
           <ListItem alignItems="flex-start">
