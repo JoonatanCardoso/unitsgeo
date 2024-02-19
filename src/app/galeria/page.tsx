@@ -172,10 +172,12 @@ export default function Galeria() {
           Galeria de Serviços
         </Typography>
       </Grid>
-      <Grid container justifyContent={"center"} xs={12} md={12}>
-        <Typography py={5} color="#808080" variant="h5" component="h5">
-          Levantamentos e Locações Topográficas em Loteamentos Urbanos
-        </Typography>
+      <Grid container justifyContent={"center"} xs={11} md={12}>
+        <Grid item xs={11} md={10}>
+          <Typography py={5} color="#808080" variant="h5" component="h5">
+            Levantamentos e Locações Topográficas em Loteamentos Urbanos
+          </Typography>
+        </Grid>
       </Grid>
       <Grid container justifyContent={"center"} xs={12} md={12}>
         <Grid item xs={11} md={10}>
@@ -193,9 +195,11 @@ export default function Galeria() {
         </Grid>
       </Grid>
       <Grid container justifyContent={"center"} xs={12} md={12}>
-        <Typography py={5} color="#808080" variant="h5" component="h5">
-          Levantamento Topográfico e Locações de Obras Urbanas e Rurais
-        </Typography>
+        <Grid item xs={11} md={10}>
+          <Typography py={5} color="#808080" variant="h5" component="h5">
+            Levantamento Topográfico e Locações de Obras Urbanas e Rurais
+          </Typography>
+        </Grid>
       </Grid>
       <Grid container justifyContent={"center"} xs={12} md={12}>
         <Grid item xs={11} md={10}>
@@ -213,9 +217,11 @@ export default function Galeria() {
         </Grid>
       </Grid>
       <Grid container justifyContent={"center"} xs={12} md={12}>
-        <Typography py={5} color="#808080" variant="h5" component="h5">
-          Serviços de Locação Topográfica de Usinas Fotovoltaica
-        </Typography>
+        <Grid item xs={11} md={10}>
+          <Typography py={5} color="#808080" variant="h5" component="h5">
+            Serviços de Locação Topográfica de Usinas Fotovoltaica
+          </Typography>
+        </Grid>
       </Grid>
       <Grid container justifyContent={"center"} xs={12} md={12}>
         <Grid item xs={11} md={10}>
@@ -233,11 +239,19 @@ export default function Galeria() {
         </Grid>
       </Grid>
       <Grid container justifyContent={"center"} xs={12} md={12}>
-        <Typography py={5} color="#808080" variant="h5" component="h5">
-          Georreferenciamento e certificação de imóvel rural no SIGEF/Incra
-        </Typography>
+        <Grid item xs={11} md={10}>
+          <Typography py={5} color="#808080" variant="h5" component="h5">
+            Georreferenciamento e certificação de imóvel rural no SIGEF/Incra
+          </Typography>
+        </Grid>
       </Grid>
-      <Grid container justifyContent={"center"} xs={12} md={12} marginBottom={5}>
+      <Grid
+        container
+        justifyContent={"center"}
+        xs={12}
+        md={12}
+        marginBottom={5}
+      >
         <Grid item xs={11} md={10}>
           <ImageList cols={12}>
             {incras.map((item) => (
