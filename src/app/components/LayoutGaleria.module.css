@@ -1,0 +1,60 @@
+.main {
+  display: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: white;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (min-width: 961px) {
+  .container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .navbarSocial {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+.navbarSocial {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: #01a94e;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  direction: rtl;
+}
+.navbarSocial a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  direction: rtl;
+  flex: 1;
+}
+
+.iconsMenu {
+  margin: 5px;
+}
+
+.logoMobile {
+  margin: 5px;
+}
+
+.button {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #01a94e;
+  font-weight: 800;
+}
