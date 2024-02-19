@@ -16,6 +16,7 @@ import {
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Link from "next/link";
 
 type Anchor = "left";
 
@@ -57,14 +58,17 @@ export default function Layout() {
     >
       <List sx={{ width: "100vw", minWidth: 360 }}>
         <ListItem>
-          <Image
-            className={styles.logoMobile}
-            src="/images/logo.png"
-            alt="Logo UnitsGeo"
-            priority={true}
-            width={150}
-            height={43}
-          />
+          <Link href='/'>
+            <Image
+              className={styles.logoMobile}
+              src="/images/logo.png"
+              alt="Logo UnitsGeo"
+              priority={true}
+              width={150}
+              height={43}
+              style={{ cursor: 'pointer' }}
+            />
+          </Link>
         </ListItem>
         <Divider variant="middle" component="li" />
         <ListItem>
@@ -162,13 +166,16 @@ export default function Layout() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Image
-          src="/images/logo-preto.png"
-          alt="Logo UnitsGeo"
-          priority={true}
-          width={150}
-          height={43}
-        />
+        <Link href='/'>
+          <Image
+            src="/images/logo-preto.png"
+            alt="Logo UnitsGeo"
+            priority={true}
+            width={150}
+            height={43}
+            style={{ cursor: 'pointer' }}
+          />
+        </Link>
         <div>
           {(["left"] as const).map((anchor) => (
             <React.Fragment key={anchor}>
