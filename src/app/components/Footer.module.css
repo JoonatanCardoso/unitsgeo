@@ -1,0 +1,46 @@
+.container {
+    display: row;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 961px) {
+    .itemsContainer {
+        display: flex;
+        text-align: left;
+        align-items: start;
+    }
+    .paragraph {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 961px) {
+    .itemsContainer {
+        display: row;
+        text-align: center;
+        align-items: center;
+        text-justify: center;
+    }
+    .paragraph {
+        text-align: center;
+    }
+}
+
+.title {
+    font-weight: 800;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.paragraph {
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.imageMaps {
+    border-top: 10px solid #00a94e;
+    border-bottom: 10px solid #00a94e;
+}
