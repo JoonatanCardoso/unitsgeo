@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from "react";
 import { Grid, useMediaQuery } from "@mui/material";
 import styles from "./Carousel.module.css";

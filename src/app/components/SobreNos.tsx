@@ -1,3 +1,4 @@
+'use client'
 import { Fade, Grid, Typography, useMediaQuery } from "@mui/material";
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./SobreNos.module.css";
