@@ -18,6 +18,7 @@ export function Galeria() {
       display="row"
       justifyContent="center"
       py={5}
+      sx={{width: "100vw",}}
     >
       <Grid item xs={11} sm={11} md={11} lg={11} xl={11}>
         <Typography
