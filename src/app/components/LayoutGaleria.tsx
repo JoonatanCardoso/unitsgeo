@@ -72,9 +72,11 @@ export default function LayoutGaleria() {
         </ListItem>
         <Divider variant="middle" component="li" />
         <ListItem>
-          <ListItemButton onClick={() => scrollToSection("contatos")}>
-            Inicio
-          </ListItemButton>
+          <Link href='/'>
+            <ListItemButton>
+              Inicio
+            </ListItemButton>
+          </Link>
         </ListItem>
         <Divider variant="middle" component="li" />
         <ListItem>

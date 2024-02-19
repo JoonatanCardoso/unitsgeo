@@ -56,6 +56,13 @@ export function Footer() {
             color="black"
             variant="subtitle1"
           >
+            unitsgeo@gmail.com
+          </Typography>
+          <Typography
+            className={styles.paragraph}
+            color="black"
+            variant="subtitle1"
+          >
             (67) 99843-6686
           </Typography>
           <Typography
