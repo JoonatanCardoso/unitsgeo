@@ -2,8 +2,8 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { ImageList, ImageListItem } from "@mui/material";
 import styles from "./galeria.module.css";
-import Layout from "../components/Layout";
 import { Footer } from "../components/Footer";
+import LayoutGaleria from "../components/LayoutGaleria";
 
 const loteamento = [
   {
@@ -157,7 +157,7 @@ function srcset(image: string, size: number, rows = 2, cols = 2) {
 export default function Galeria() {
   return (
     <Box display="row" className={styles.container} justifyContent="center">
-      <Layout />
+      <LayoutGaleria />
       <Grid
         item
         xs={11}
