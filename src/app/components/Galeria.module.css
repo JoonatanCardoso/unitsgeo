@@ -1,0 +1,13 @@
+.container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    border-top: 10px solid #00a94e;
+}
+
+.title {
+    font-weight: 800;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
