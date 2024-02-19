@@ -80,6 +80,12 @@ export default function Layout() {
         </ListItem>
         <Divider variant="middle" component="li" />
         <ListItem>
+          <ListItemButton onClick={() => scrollToSection("galeria")}>
+            Galeria
+          </ListItemButton>
+        </ListItem>
+        <Divider variant="middle" component="li" />
+        <ListItem>
           <ListItemButton onClick={() => scrollToSection("contatos")}>
             Contatos
           </ListItemButton>
@@ -150,7 +156,7 @@ export default function Layout() {
         padding={1}
         sx={{ flexDirection: { xs: "row", md: "row" } }}
         style={{
-          backgroundImage: "url(/images/navbar.jpg)",
+          backgroundImage: "url(/images/navbarcop.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
@@ -187,7 +193,7 @@ export default function Layout() {
             justifyContent="right"
             container
             xs={12}
-            md={9}
+            md={10}
             sx={{ flexDirection: { xs: "row", md: "row" } }}
           >
             <Grid className={styles.img} item xs={12} md={isDesktop ? 2 : 3}>
@@ -206,6 +212,15 @@ export default function Layout() {
                 sx={{ color: '#000'}}
               >
                 Serviços
+              </Button>
+            </Grid>
+            <Grid className={styles.img} item xs={12} md={isDesktop ? 2 : 3}>
+              <Button
+                className={styles.button}
+                onClick={() => scrollToSection("galeria")}
+                sx={{ color: '#000'}}
+              >
+                Galeria
               </Button>
             </Grid>
             <Grid className={styles.img} item xs={12} md={isDesktop ? 2 : 3}>
