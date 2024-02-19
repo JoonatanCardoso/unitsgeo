@@ -1,11 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./page.module.css";
-import Layout from "./components/Layout";
-import { Carousel } from "./components/Carousel";
-import { SobreNos } from "./components/SobreNos";
-import { Servicos } from "./components/Servicos";
-import { Contatos } from "./components/Contatos";
+import Principal from "./home/page";
 import FloatingButton from "./components/FloatingButton";
 
 export default function Home() {
@@ -19,11 +15,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <Layout />
-        <Carousel />
-        <SobreNos />
-        <Servicos />
-        <Contatos />
+        <Principal />
         <FloatingButton onClick={handleButtonClick} />
       </div>
     </main>
